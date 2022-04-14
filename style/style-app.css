@@ -1,1 +1,29 @@
-/*# sourceMappingURL=style-app.css.map */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: rgb(0, 36, 4);
+  background: linear-gradient(90deg, rgb(0, 36, 4) 0%, rgb(40, 167, 125) 0%, rgb(64, 203, 20) 82%, rgb(0, 255, 115) 100%);
+}
+
+.nav-tabs {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+}
+.nav-tabs .nav-link {
+  border-radius: 0 !important;
+  font-size: 20px;
+  color: white;
+}
+.nav-tabs .active {
+  color: #495057;
+  background-color: #ffc107 !important;
+  border-color: transparent !important;
+}/*# sourceMappingURL=style-app.css.map */
