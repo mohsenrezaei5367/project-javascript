@@ -34,7 +34,44 @@ body {
 .container{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     h1{
         color: #fff;
+    }
+    .card{
+        min-height: 22vh;
+        width: 40%;
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        .emoje-container{
+            //background-color: chartreuse;
+            width: 81px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            .far{
+                font-size: 5em;
+                margin: 1px;
+                transform: translateY(0);
+                transition: transform 0.2s;
+            }
+        }
+        .rating-container{
+            .fa-star{
+                font-size:2.5rem;
+                cursor: pointer;
+                color: #d3d3d3;
+               
+            }
+            .fa-star.active{
+                color: #ffd700;
+            }
+        }
     }
 }
