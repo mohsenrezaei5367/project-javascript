@@ -1,32 +1,40 @@
-
 *,
 *::after,
-*::before{
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html,body{
+html,
+body {
     height: 100%;
-    background: rgb(0,36,4);
-background: linear-gradient(90deg, rgba(0,36,4,1) 0%,
- rgba(40,167,125,1) 0%, rgba(64,203,20,1) 82%, rgba(0,255,115,1) 100%);
+    background: rgb(0, 36, 4);
+    background: linear-gradient(90deg, rgba(0, 36, 4, 1) 0%,
+            rgba(40, 167, 125, 1) 0%, rgba(64, 203, 20, 1) 82%, rgba(0, 255, 115, 1) 100%);
 }
 
-.nav-tabs{
+.nav-tabs {
     background-color: #000;
     display: flex;
     justify-content: center;
-  
-    .nav-link{
+
+    .nav-link {
         border-radius: 0 !important;
         font-size: 20px;
-       color: #ffff;
+        color: #ffff;
     }
+
     .active {
         color: #495057;
         background-color: #ffc107 !important;
-         border-color: transparent !important
+        border-color: transparent !important
+    }
+}
+.container{
+    display: flex;
+    justify-content: center;
+    h1{
+        color: #fff;
     }
 }
