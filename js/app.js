@@ -47,6 +47,31 @@ contersEl.forEach(res => {
     }
 })
 // Profile Statistics finish...................... 
+// images gallery start
 
+const imageContainerEl = document.querySelector('.image-containetr')
+const prevEl = document.getElementById('prev')
+const nextEl = document.getElementById('next')
+let x = 0
+let timer;
+prevEl.addEventListener('click', () => {
+    x = x + 45
+    clearTimeout(timer)
+    updateGallery()
+    console.log(x)
+})
+nextEl.addEventListener('click', () => {
+    x = x - 45
+    clearTimeout(timer)
+    updateGallery()
+})
+function updateGallery() {
+    imageContainerEl.style.transform = `perspective(1000px) rotateY(${x}deg)`
+    timer = setTimeout(() => {
+        x = x - 45
+        updateGallery()
+    }, 3000);
+}
+updateGallery()
 
-
+// finish image gallery..............
