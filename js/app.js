@@ -25,3 +25,28 @@ function updateRating(index) {
 }
 // finish emoje rating .............................................
 
+
+// Profile Statistics start 
+const contersEl = document.querySelectorAll('.conter')
+contersEl.forEach(res => {
+    res.innerText = '0'
+    incementCounter()
+    function incementCounter() {
+        let currtunNum = +res.innerText
+        const dataCeil = res.getAttribute('data-ceil')
+        const incetment = dataCeil / 15
+        currtunNum = Math.floor(currtunNum + incetment)
+
+        if (currtunNum < dataCeil) {
+            res.innerText = currtunNum
+            setTimeout(incementCounter, 100)
+        } else {
+            res.innerText = dataCeil
+        }
+
+    }
+})
+// Profile Statistics finish...................... 
+
+
+

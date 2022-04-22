@@ -4,7 +4,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
+@font-face {
+    font-family: kalmeh;
+    src: url("../fonts/kalameh/Kalameh_Bold.ttf") ,
+         
+  }
 
 html,
 body {
@@ -12,6 +18,8 @@ body {
     background: rgb(0, 36, 4);
     background: linear-gradient(90deg, rgba(0, 36, 4, 1) 0%,
             rgba(40, 167, 125, 1) 0%, rgba(64, 203, 20, 1) 82%, rgba(0, 255, 115, 1) 100%);
+            font-family: kalmeh;
+            
 }
 
 .nav-tabs {
@@ -31,15 +39,19 @@ body {
         border-color: transparent !important
     }
 }
-.container{
+
+.container {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    h1{
+
+    h1 {
         color: #fff;
+        
     }
-    .card{
+
+    .card {
         min-height: 22vh;
         width: 40%;
         margin-top: 20px;
@@ -49,29 +61,80 @@ body {
         flex-direction: column;
         align-items: center;
         position: relative;
-        .emoje-container{
+
+        .emoje-container {
             //background-color: chartreuse;
             width: 81px;
             height: 80px;
             border-radius: 50%;
             overflow: hidden;
-            .far{
+
+            .far {
                 font-size: 5em;
                 margin: 1px;
                 transform: translateY(0);
                 transition: transform 0.2s;
             }
         }
-        .rating-container{
-            .fa-star{
-                font-size:2.5rem;
+
+        .rating-container {
+            .fa-star {
+                font-size: 2.5rem;
                 cursor: pointer;
                 color: #d3d3d3;
-               
+
             }
-            .fa-star.active{
+
+            .fa-star.active {
                 color: #ffd700;
             }
         }
+    }
+
+    .profile-container {
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .main{
+            
+           .box-profile {
+            width: 100%;
+            height: 250px;
+            border: 3px dashed rgb(12, 88, 20);
+            margin: 15px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 30px;
+            @media (max-width:800px) {
+                margin-top: 2.2rem;
+            }
+            .conter{
+                font-size: 80px !important;
+                color: #ffc107;
+                
+            }
+
+            .fa {
+                font-size: 86px;
+                position: absolute;
+                top: -21%;
+                left: 39%;
+            }
+
+            .text-profile {
+                font-size: 28px;
+                font-weight: bold;
+                color: #18520c;
+            }
+        } 
+        }
+
+        
     }
 }
