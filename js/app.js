@@ -75,3 +75,33 @@ function updateGallery() {
 updateGallery()
 
 // finish image gallery..............
+
+// start new year
+
+const dayEl = document.getElementById('day')
+const hourEl = document.getElementById('hour')
+const minuteEl = document.getElementById('minute')
+const seacendEl = document.getElementById('seacend')
+const newYearTime = new Date("Jan 1,2023 00:00:00").getTime()
+
+updateCountdown()
+function updateCountdown() {
+    const now = new Date().getTime()
+    const gap = newYearTime - now
+    const seacend = 1000;
+    const minute = seacend * 60
+    const hour = minute * 60
+    const day = hour * 24
+
+    const d = Math.floor(gap / day)
+    const h = Math.floor((gap % day) / hour)
+    const m = Math.floor((gap % hour) / minute)
+    const s = Math.floor((gap % minute) / seacend)
+
+    dayEl.innerHTML = d
+    hourEl.innerHTML = h
+    minuteEl.innerHTML = m
+    seacendEl.innerHTML = s
+    setInterval(updateCountdown, 1000)
+
+}

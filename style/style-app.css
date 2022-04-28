@@ -33,6 +33,11 @@ body {
   overflow: hidden;
 }
 
+#nav-time-new-year {
+  background-color: #8e54b4 !important;
+  min-height: 95vh;
+}
+
 .nav-tabs {
   background-color: #000;
   display: flex;
@@ -189,4 +194,87 @@ body {
 .btn-light:hover {
   background-color: transparent;
   color: #fff;
+}
+
+.container-new-year {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7rem;
+}
+@media (max-width: 800px) {
+  .container-new-year {
+    margin-top: 1rem;
+  }
+}
+.container-new-year .year {
+  font-size: 10rem;
+  text-align: center;
+}
+@media (max-width: 800px) {
+  .container-new-year .year {
+    font-size: 5rem;
+  }
+}
+.container-new-year .title {
+  text-align: center;
+  font-size: 7rem;
+}
+@media (max-width: 800px) {
+  .container-new-year .title {
+    font-size: 3rem;
+  }
+}
+.container-new-year .countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 5rem;
+  position: relative;
+  text-align: center;
+}
+.container-new-year .countdown div {
+  margin: 0 30px;
+  color: #fff;
+  position: relative;
+  font-weight: 500;
+  font-family: sans-serif !important;
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 800px) {
+  .container-new-year .countdown div {
+    font-size: 15px;
+  }
+}
+.container-new-year .countdown div::before {
+  content: "";
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 100px;
+  height: 36px;
+}
+@media (max-width: 800px) {
+  .container-new-year .countdown div::before {
+    font-size: 11px;
+    left: -38px;
+  }
+}
+.container-new-year .countdown #day::before {
+  content: "Day";
+}
+.container-new-year .countdown #hour::before {
+  content: "Hour";
+}
+.container-new-year .countdown #minute::before {
+  content: "Minute";
+}
+.container-new-year .countdown #seacend::before {
+  content: "Seacend";
 }/*# sourceMappingURL=style-app.css.map */
